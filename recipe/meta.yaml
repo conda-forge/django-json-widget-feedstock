@@ -1,18 +1,18 @@
 {% set name = "django-json-widget" %}
-{% set version = "1.1.1" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ec948a4c379687f9c854748ba540fdbeb1b1730846ca953f186818521de7e696
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: feae64cf0656af8c8f8ddec22e93d65ceb58c23d4d46512e343ed966be1bd640
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
