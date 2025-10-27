@@ -22,7 +22,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - future
-    - django >=2.2.13
+    - django >=5
 
 test:
   imports:
